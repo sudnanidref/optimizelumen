@@ -116,4 +116,8 @@ $app->routeMiddleware([
     'throttle' => App\Http\Middleware\ThrottleRequests::class,
 ]);
 
+$app->register(Illuminate\Redis\RedisServiceProvider::class); 
+
+$app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
+
 return $app;
